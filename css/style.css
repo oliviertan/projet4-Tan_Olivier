@@ -41,6 +41,11 @@ a {
   display: flex;
   flex-direction: row;
 }
+#heart{
+}
+#heart:focus .fa-heart{
+  color: #9356DC;
+}
 
 /* header */
 header {
@@ -83,6 +88,9 @@ header img {
 }
 .fa-store{
   color: var(--primary-color);
+}
+.fa-heart:active{
+  background-color: linear-gradient(180deg,var(--secondary-color), var(--primary-color));
 }
 /****** card ***********/
 .card {
