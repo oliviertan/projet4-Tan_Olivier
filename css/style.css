@@ -242,6 +242,8 @@ footer h3{
   background: linear-gradient(180deg,var(--secondary-color), var(--primary-color));
   text-align: center;
   height: 50px;
+  transform: scale(1);
+  transition-duration: 800ms;
 }
 .bouton-explorer p {
   padding-top: 10px;
@@ -356,6 +358,9 @@ footer h3{
   height: 250px;
 }
 
+.bouton-explorer:hover{
+  scale: 1.2;
+}
 /* desktop  */
 @media (min-width: 1024px) {
   /* acceuil */
