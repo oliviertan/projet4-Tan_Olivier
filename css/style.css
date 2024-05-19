@@ -281,7 +281,9 @@ footer h3{
 }
 
 .menu-titles {
-  padding-left: 10px;
+  align-self:self-start ;
+  border-bottom: 2px solid lightgreen;
+  width: 40px;
 }
 
 .order-button {
@@ -360,18 +362,34 @@ footer h3{
   header img {
     width: 25%;
   }
+  .location{
+    border: none;
+  }
   .Fonctionnement {
     align-items: flex-start;
   }
   .Fonctionnement section {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    align-self: center;
+    justify-content: space-around;
+    width: 80%;
+  }
+  .Fonctionnement h2  {
+    padding-left: 8%;
+  }
+  .Fonctionnement div {
+    width: 30%;
+    height: 75px;
+  }
+  .restaurant h2{
+    padding-left: 8%;
   }
   .restaurant-card {
     flex-direction: row;
+    align-self: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .restaurant-card a {
     width: 40%;
@@ -389,6 +407,9 @@ footer h3{
   .footer-div {
     display: flex;
     flex-direction: row;
+  }
+  .footer-div p{
+    width: 150px;
   }
   /* restaurant */
   .restaurant-menu {
