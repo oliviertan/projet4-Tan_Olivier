@@ -254,7 +254,7 @@ footer h3{
   margin-top: -40px;
   width: 100%;
   background-color: var(--main-bg-color);
-  justify-content: center;
+  align-items: center;
   position: relative;
 
 }
@@ -267,6 +267,10 @@ footer h3{
 .menu-card .row{
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.menu-div {
+  width: 90%;
 }
 .menu-div .card-txt {
   padding-top: 4px;
@@ -304,7 +308,6 @@ footer h3{
 .restaurant-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 95%;
 }
@@ -344,7 +347,6 @@ footer h3{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .container img {
@@ -382,6 +384,7 @@ footer h3{
     flex-direction: row-reverse;
     align-items: flex-end;
     height: 150px;
+    padding-bottom: 30px;
   }
   .footer-div {
     display: flex;
@@ -390,9 +393,6 @@ footer h3{
   /* restaurant */
   .restaurant-menu {
     width: 80%;
-  }
-  .menu-div {
-    width: 90%;
   }
 
 }
