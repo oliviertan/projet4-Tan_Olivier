@@ -113,9 +113,7 @@ header img {
 .fa-grey{
   color: gray;
 }
-.fa-store{
-  color: var(--primary-color);
-}
+
 .fa-circle-check{
   color: white;
   font-size: xx-large;
@@ -224,7 +222,6 @@ footer h3{
 .Fonctionnement .fa-solid{
   margin-right: 10px;
 }
-
 .intro {
   width: 100%;
   align-items: center;
@@ -263,7 +260,7 @@ footer h3{
 
 .menu-card .card {
   width: 90%;
-  height: 80px;
+  height: 90px;
   margin: 15px;
 }
 .menu-card .row{
@@ -287,7 +284,9 @@ footer h3{
   border-bottom: 2px solid lightgreen;
   width: 40px;
 }
-
+button{
+  border: none;
+}
 .order-button {
   margin-top: 10px;
   background: linear-gradient(180deg,var(--secondary-color), var(--primary-color));
@@ -296,6 +295,8 @@ footer h3{
   width: 45%;
   max-width: 240px;
   text-align: center;
+  transform: scale(1);
+  transition-duration: 800ms;
 }
 
 /*  restaurant  */
@@ -358,9 +359,10 @@ footer h3{
   height: 250px;
 }
 
-.bouton-explorer:hover{
-  scale: 1.2;
+button:hover{
+  scale: 1.1;
 }
+
 /* desktop  */
 @media (min-width: 1024px) {
   /* acceuil */
@@ -418,6 +420,9 @@ footer h3{
   }
   /* restaurant */
   .restaurant-menu {
+    width: 80%;
+  }
+  .menu-card .card{
     width: 80%;
   }
 
