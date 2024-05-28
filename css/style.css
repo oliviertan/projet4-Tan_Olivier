@@ -42,7 +42,7 @@ a {
   flex-direction: row;
 }
 /*** heart animation ******/
-#heart{
+.heart{
   display: none;
 }
 .likeheart input[type="checkbox"],
@@ -62,11 +62,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20%;
+  width: 0.001em;
   height: 100%;
   background-color: lightgreen;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  transition-duration: 1s;
+  margin-left: 15px;
+}
+.menu-card .card:hover .checking{
+  width: 20%;
 }
 
 /* header */
@@ -154,10 +159,12 @@ header img {
   border-top-right-radius: 30px;
 }
 
+/*** footer ***/
 footer {
   width: 100%;
   background-color: rgba(12, 12, 11, 0.823);
   color: white;
+  padding-bottom: 10px;
 }
 footer a {
   width: 90%;
@@ -186,11 +193,23 @@ footer h3{
 .footer-div{
   margin-left: 10px;
 }
+
+.footer-div div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /* fonctionnement */
 .Fonctionnement {
   align-items: center;
   justify-content: center;
   margin: 10px;
+}
+
+.Fonctionnement h2{
+  align-self: flex-start;
+  margin-left: 5px;
 }
 .Fonctionnement section {
   display: flex;
@@ -202,7 +221,9 @@ footer h3{
   display: flex;
   border-radius: 20px;
   background-color: var(--main-bg-color);
-  width: 60%;
+  width: 88%;
+  max-width: 285px;
+  height: 60px;
   margin: 10px;
   text-align: center;
   justify-content: center;
@@ -210,7 +231,7 @@ footer h3{
   flex-direction: row;
   justify-content: flex-start;
 }
-.Fonctionnement p {
+.Fonctionnement .num {
   border-radius: 60px;
   background-color: var(--primary-color);
   color: white;
@@ -221,6 +242,10 @@ footer h3{
 }
 .Fonctionnement .fa-solid{
   margin-right: 10px;
+}
+
+.Fonctionnement div:hover .fa-solid{
+  color: var(--primary-color);
 }
 .intro {
   width: 100%;
@@ -238,6 +263,7 @@ footer h3{
 .bouton-explorer {
   background: linear-gradient(180deg,var(--secondary-color), var(--primary-color));
   text-align: center;
+  color: white;
   height: 50px;
   transform: scale(1);
   transition-duration: 800ms;
@@ -257,30 +283,39 @@ footer h3{
   position: relative;
 
 }
-
 .menu-card .card {
-  width: 90%;
-  height: 90px;
+  width: 98%;
+  height: 75px;
   margin: 15px;
+  overflow: hidden;
 }
 .menu-card .row{
   align-items: flex-end;
+
+}
+.menu-card .card .info{
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 95%;
   justify-content: space-between;
 }
-
 .menu-div {
   width: 90%;
+  align-self: center;
 }
 .menu-div .card-txt {
-  padding-top: 4px;
   padding-left: 8px;
+  overflow: hidden;
 }
 .menu-div .prix {
   align-items: flex-end;
 }
-
+.menu-div .card-title{
+    margin: 0px;
+}
 .menu-titles {
-  align-self:self-start ;
+  align-self:start ;
   border-bottom: 2px solid lightgreen;
   width: 40px;
 }
@@ -294,6 +329,8 @@ button{
   height: 50px;
   width: 45%;
   max-width: 240px;
+  margin-bottom: 10px;
+  color: white;
   text-align: center;
   transform: scale(1);
   transition-duration: 800ms;
@@ -317,12 +354,9 @@ button{
   width: 95%;
 }
 
-
-.restaurant-card a {
-  width: 100%;
-}
 .restaurant-card .card {
-  width: 100%;
+  align-self: center;
+  width: 80%;
   margin: 10px;
   height: 230px;
 }
@@ -332,7 +366,7 @@ button{
 }
 .restaurant-card img {
   width: 100%;
-  height: 80%;
+  height: 75%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -356,11 +390,12 @@ button{
 
 .container img {
   width: 100%;
-  height: 250px;
+  height: 280px;
+  object-fit: cover;
 }
 
 button:hover{
-  scale: 1.1;
+  opacity:80%;
 }
 
 /* desktop  */
@@ -398,7 +433,7 @@ button:hover{
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  .restaurant-card a {
+  .restaurant-card .card {
     width: 40%;
   }
   footer h3 {
@@ -416,7 +451,7 @@ button:hover{
     flex-direction: row;
   }
   .footer-div p{
-    width: 150px;
+    width: 160px;
   }
   /* restaurant */
   .restaurant-menu {
@@ -425,7 +460,9 @@ button:hover{
   .menu-card .card{
     width: 80%;
   }
-
+  .restaurant-menu{
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
