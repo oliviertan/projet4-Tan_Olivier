@@ -1,0 +1,25 @@
+.card {
+	background-color: $background-color_3;
+	border-radius: 20px;
+	filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+	img {
+		object-fit: cover;
+	}
+}
+.card-title {
+	font-size: 16px;
+}
+.card-subtitle {
+	margin: 0;
+}
+.border-radius-20 {
+	border-radius: 20px;
+}
+.border-radius-30 {
+	border-radius: 30px;
+}
+.border-top-radius-30 {
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+

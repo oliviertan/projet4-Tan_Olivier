@@ -1,0 +1,130 @@
+
+.Fonctionnement {
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	h2 {
+		align-self: flex-start;
+		margin-left: 5px;
+	}
+	section {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		flex-direction: column;
+	}
+	div {
+		display: flex;
+		border-radius: 20px;
+		background-color: $background-color_5;
+		width: 88%;
+		max-width: 285px;
+		height: 60px;
+		margin: 10px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		justify-content: flex-start;
+		&:hover {
+			.fa-solid {
+				color: $color_2;
+			}
+		}
+	}
+	.num {
+		border-radius: 60px;
+		background-color: $background-color_6;
+		color: $color_4;
+		width: 18px;
+		height: 18px;
+		margin-left: -10px;
+		margin-right: 10px;
+	}
+	.fa-solid {
+		margin-right: 10px;
+	}
+}
+.intro {
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	background: var(--main-bg-color);
+	height: 250px;
+	a {
+		width: 35%;
+		max-width: 240px;
+		height: 50px;
+	}
+}
+
+
+.restaurant {
+	background-color: $background-color_5;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	margin-top: 30px;
+}
+
+.restaurant-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 95%;
+	.card {
+		align-self: center;
+		width: 90%;
+		margin: 10px;
+		height: 230px;
+	}
+	.row {
+		align-items: center;
+		justify-content: space-between;
+	}
+	img {
+		width: 100%;
+		height: 75%;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+	.card-txt {
+		margin-left: 8px;
+		* {
+			margin-top: 1px;
+			margin-bottom: 1px;
+		}
+	}
+	.fa-heart {
+		margin-right: 8px;
+	}
+}
+
+.fa-grey {
+	color: $color_3;
+}
+
+@media (min-width: 1024px) {
+	.Fonctionnement {
+		align-items: flex-start;
+		section {
+			display: flex;
+			flex-direction: row;
+			align-self: center;
+			justify-content: space-around;
+			width: 80%;
+		}
+		h2 {
+			padding-left: 8%;
+		}
+		div {
+			width: 30%;
+			height: 75px;
+		}
+	}
+	
+	.restaurant {
+		h2 {
+			padding-left: 8%;
+		}
+	}
+}
