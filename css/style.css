@@ -238,7 +238,7 @@ footer h3 {
     flex-direction: row;
   }
   .footer-div p {
-    width: 160px;
+    width: 175px;
   }
 }
 header {
@@ -398,6 +398,20 @@ header img {
   color: gray;
 }
 
+@media (min-width: 767.98px) {
+  .restaurant-card {
+    flex-direction: row;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .restaurant-card .card {
+    width: 40%;
+  }
+  .restaurant h2 {
+    margin-left: 10px;
+  }
+}
 @media (min-width: 1024px) {
   .Fonctionnement {
     align-items: flex-start;
@@ -433,6 +447,8 @@ header img {
 }
 
 .menu-card .card {
+  animation: 6s card-appear linear;
+  animation-fill-mode: forwards;
   width: 98%;
   height: 75px;
   margin: 15px;
@@ -452,6 +468,20 @@ header img {
   align-items: flex-end;
 }
 
+@keyframes card-appear {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    width: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    width: 98%;
+    opacity: 1;
+  }
+}
 .restaurant-menu {
   display: flex;
   flex-direction: column;
@@ -461,12 +491,12 @@ header img {
   align-items: center;
   position: relative;
 }
-.restaurant-menu .restaurant-title-div {
+
+.restaurant-title-div {
   width: 90%;
   justify-content: space-between;
   align-items: center;
 }
-
 .restaurant-title-div h2 {
   font-family: "shrikhand";
 }
@@ -477,7 +507,11 @@ header img {
 }
 .menu-div .card-txt {
   padding-left: 8px;
-  overflow: hidden;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-overflow: ellipsis;
 }
 .menu-div .prix {
   align-items: flex-end;
@@ -492,20 +526,6 @@ header img {
   width: 40px;
 }
 
-@media (min-width: 767.98px) {
-  .restaurant-card {
-    flex-direction: row;
-    align-self: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  .restaurant-card .card {
-    width: 40%;
-  }
-  .restaurant h2 {
-    margin-left: 10px;
-  }
-}
 @media (min-width: 1024px) {
   .restaurant-menu {
     width: 80%;
@@ -513,6 +533,9 @@ header img {
   }
   .menu-card .card {
     width: 80%;
+  }
+  .restaurant-title-div {
+    width: 40%;
   }
 }
 

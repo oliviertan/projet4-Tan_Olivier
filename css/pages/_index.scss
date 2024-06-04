@@ -102,7 +102,22 @@
 .fa-grey {
 	color: $color_3;
 }
-
+@media (min-width:767.98px) {
+	.restaurant-card {
+		flex-direction: row;
+		align-self: center;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		.card {
+			width: 40%;
+		}
+	}
+	.restaurant {
+		h2 {
+			margin-left: 10px;
+		}
+	}
+}
 @media (min-width: 1024px) {
 	.Fonctionnement {
 		align-items: flex-start;
