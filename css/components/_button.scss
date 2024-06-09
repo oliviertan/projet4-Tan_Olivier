@@ -24,6 +24,8 @@ button {
 	color: $color_4;
 	background: linear-gradient(180deg,var(--secondary-color), var(--primary-color));
 	text-align: center;
+	width: 70%;
+    max-width: 250px;
 	&:hover {
 		opacity: 80%;
 		box-shadow: 5px 5px 5px grey;

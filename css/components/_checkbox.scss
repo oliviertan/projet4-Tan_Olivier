@@ -2,13 +2,14 @@
 	display: none;
 }
 .likeheart {
+	
 	input[type="checkbox"] {
 		font-weight: 400;
 		&:checked {
 			~ {
 				.fa-heart {
-					font-weight: 900;
-					color: $color_2;
+					animation: 2s colorheart linear;
+					animation-fill-mode: forwards;
 				}
 			}
 		}
@@ -29,8 +30,4 @@
 	border-bottom-right-radius: 30px;
 	transition-duration: 1s;
 	margin-left: 15px;
-}
-.fa-circle-check {
-	color: $color_4;
-	font-size: xx-large;
 }

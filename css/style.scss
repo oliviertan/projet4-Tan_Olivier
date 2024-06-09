@@ -1,6 +1,8 @@
 @import"utils/_variables.scss";
+@import"components/_keyframes.scss";
 @import"base/_color.scss";
 @import"base/_font.scss";
+@import"base/_fa.scss";
 @import"components/_button.scss";
 @import"components/_card.scss";
 @import"components/_checkbox.scss";
@@ -10,7 +12,7 @@
 @import"layout/_header.scss";
 @import"pages/_index.scss";
 @import"pages/_restaurant.scss";
-
+@import"layout/_mediaquerries.scss";
 
 
 

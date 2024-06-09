@@ -1,3 +1,40 @@
+@keyframes loaderfade {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+@keyframes lineGrow {
+  to {
+    width: 100%;
+  }
+}
+@keyframes card-appear {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    width: 98%;
+    opacity: 1;
+  }
+}
 :root {
   --main-bg-color: #F2F2F2;
   --filter-bg-color: #DEEBFF;
@@ -17,6 +54,25 @@ p {
 a {
   text-decoration: none;
   color: black;
+}
+
+.fa-circle-check {
+  color: white;
+  font-size: xx-large;
+}
+
+.fa-arrow-left {
+  font-size: xx-large;
+  padding-left: 8px;
+}
+
+.fa-location-dot {
+  padding-right: 8px;
+  color: black;
+}
+
+.fa-grey {
+  color: gray;
 }
 
 .order-button {
@@ -45,6 +101,8 @@ button {
   color: white;
   background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
   text-align: center;
+  width: 70%;
+  max-width: 250px;
 }
 button:hover {
   opacity: 80%;
@@ -85,6 +143,9 @@ button:hover {
   display: none;
 }
 
+.likeheart {
+  transition-duration: 4s;
+}
 .likeheart input[type=checkbox] {
   font-weight: 400;
 }
@@ -102,16 +163,11 @@ button:hover {
   justify-content: center;
   width: 0.001em;
   height: 100%;
-  background-color: rgb(97, 235, 97);
+  background-color: rgb(174, 235, 174);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   transition-duration: 1s;
   margin-left: 15px;
-}
-
-.fa-circle-check {
-  color: white;
-  font-size: xx-large;
 }
 
 .loading_screen {
@@ -145,29 +201,6 @@ button:hover {
   animation: 5s lineGrow linear;
 }
 
-@keyframes loaderfade {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-  }
-  100% {
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-}
-@keyframes lineGrow {
-  to {
-    width: 100%;
-  }
-}
 body {
   margin: 0px;
 }
@@ -210,6 +243,7 @@ footer .fa-solid {
 }
 footer h3 {
   margin-left: 10px;
+  font-family: "shrikhand";
 }
 
 .footer-div {
@@ -221,26 +255,6 @@ footer h3 {
   align-items: center;
 }
 
-@media (min-width: 1024px) {
-  footer h3 {
-    margin-right: 10px;
-    margin-bottom: 0px;
-  }
-  footer .column {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    height: 150px;
-    padding-bottom: 30px;
-  }
-  .footer-div {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer-div p {
-    width: 175px;
-  }
-}
 header {
   display: flex;
 }
@@ -278,24 +292,6 @@ header img {
   padding-top: 9px;
 }
 
-.fa-arrow-left {
-  font-size: xx-large;
-  padding-left: 8px;
-}
-
-.fa-location-dot {
-  padding-right: 8px;
-  color: black;
-}
-
-@media (min-width: 1024px) {
-  header img {
-    width: 25%;
-  }
-  .location {
-    border: none;
-  }
-}
 .Fonctionnement {
   align-items: center;
   justify-content: center;
@@ -394,46 +390,6 @@ header img {
   margin-right: 8px;
 }
 
-.fa-grey {
-  color: gray;
-}
-
-@media (min-width: 767.98px) {
-  .restaurant-card {
-    flex-direction: row;
-    align-self: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  .restaurant-card .card {
-    width: 40%;
-  }
-  .restaurant h2 {
-    margin-left: 10px;
-  }
-}
-@media (min-width: 1024px) {
-  .Fonctionnement {
-    align-items: flex-start;
-  }
-  .Fonctionnement section {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    justify-content: space-around;
-    width: 80%;
-  }
-  .Fonctionnement h2 {
-    padding-left: 8%;
-  }
-  .Fonctionnement div {
-    width: 30%;
-    height: 75px;
-  }
-  .restaurant h2 {
-    padding-left: 8%;
-  }
-}
 .container {
   position: relative;
   display: flex;
@@ -447,15 +403,19 @@ header img {
 }
 
 .menu-card .card {
-  animation: 6s card-appear linear;
-  animation-fill-mode: forwards;
   width: 98%;
   height: 75px;
   margin: 15px;
   overflow: hidden;
 }
+.menu-card .card:hover {
+  justify-content: space-evenly;
+}
 .menu-card .card:hover .checking {
   width: 20%;
+}
+.menu-card .card:hover .info {
+  width: 80%;
 }
 .menu-card .card .info {
   margin-left: 10px;
@@ -463,25 +423,12 @@ header img {
   margin-bottom: 10px;
   width: 95%;
   justify-content: space-between;
+  transition-duration: 1s;
 }
 .menu-card .row {
   align-items: flex-end;
 }
 
-@keyframes card-appear {
-  0% {
-    opacity: 0;
-    width: 0;
-  }
-  50% {
-    width: 50%;
-    opacity: 0.5;
-  }
-  100% {
-    width: 98%;
-    opacity: 1;
-  }
-}
 .restaurant-menu {
   display: flex;
   flex-direction: column;
@@ -502,22 +449,44 @@ header img {
 }
 
 .menu-div {
-  width: 90%;
+  width: 75%;
   align-self: center;
 }
 .menu-div .card-txt {
+  width: 80%;
   padding-left: 8px;
+  margin-right: 10px;
   height: 55px;
+  overflow: hidden;
+  white-space: nowrap;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.menu-div .card-txt p {
+  width: 100%;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu-div .prix {
   align-items: flex-end;
 }
 .menu-div .card-title {
   margin: 0px;
+  font-weight: bold;
+}
+.menu-div .entree {
+  animation: 2s card-appear linear;
+  animation-fill-mode: forwards;
+}
+.menu-div .plat {
+  animation: 5s card-appear linear;
+  animation-fill-mode: forwards;
+}
+.menu-div .desserts {
+  animation: 9s card-appear linear;
+  animation-fill-mode: forwards;
 }
 
 .menu-titles {
@@ -526,16 +495,78 @@ header img {
   width: 40px;
 }
 
+@media (min-width: 767.98px) {
+  .restaurant-card {
+    flex-direction: row;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .restaurant-card .card {
+    width: 40%;
+  }
+  .restaurant h2 {
+    margin-left: 10px;
+  }
+}
 @media (min-width: 1024px) {
+  /** header **/
+  header img {
+    width: 25%;
+  }
+  .location {
+    border: none;
+  }
+  /** index **/
+  .Fonctionnement {
+    align-items: flex-start;
+  }
+  .Fonctionnement section {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    width: 80%;
+  }
+  .Fonctionnement h2 {
+    padding-left: 8%;
+  }
+  .Fonctionnement div {
+    width: 30%;
+    height: 75px;
+  }
+  .restaurant h2 {
+    padding-left: 8%;
+  }
+  /** pages restaurant**/
   .restaurant-menu {
     width: 80%;
     width: 70%;
   }
   .menu-card .card {
-    width: 80%;
+    width: 95%;
   }
   .restaurant-title-div {
     width: 40%;
+  }
+  /** footer **/
+  footer h3 {
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+  footer .column {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 150px;
+    padding-bottom: 30px;
+  }
+  .footer-div {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-div p {
+    width: 175px;
   }
 }
 

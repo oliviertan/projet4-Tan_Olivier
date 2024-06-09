@@ -12,11 +12,15 @@
 
 .menu-card {
 	.card {
-		animation:6s card-appear linear ;
-    	animation-fill-mode: forwards;
+
 		&:hover {
+			justify-content: space-evenly;
 			.checking {
-				width: 20%;
+				width: calc(20%);
+			}
+			.info{
+				width: 80%;
+				
 			}
 		}
 		width: 98%;
@@ -29,26 +33,14 @@
 			margin-bottom: 10px;
 			width: 95%;
 			justify-content: space-between;
+			transition-duration: 1s;
 		}
 	}
 	.row {
 		align-items: flex-end;
 	}
 }
-@keyframes card-appear{
-	0%{
-		opacity: 0;
-		width: 0;
-	}
-	50%{
-		width: 50%;
-		opacity: 0.5;
-	}
-	100%{
-		width: 98%;
-		opacity: 1;
-	}
-}
+
 .restaurant-menu {
 	display: flex;
 	flex-direction: column;
@@ -67,41 +59,50 @@
 	}
 }
 .menu-div {
-	width: 90%;
+	width: 75%;
 	align-self: center;
 	.card-txt {
+		width: 80%;
 		padding-left: 8px;
+		margin-right: 10px;
 		height: 55px;
+		overflow: hidden;
+		white-space: nowrap;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		text-overflow: ellipsis;
+		p{
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 	}
 	.prix {
 		align-items: flex-end;
 	}
 	.card-title {
 		margin: 0px;
-		
+		font-weight: bold;
 	}
+	.entree{
+		animation:2s card-appear linear ;
+    	animation-fill-mode: forwards;
+	}
+	.plat{
+		animation:5s card-appear linear ;
+    	animation-fill-mode: forwards;
+	}
+	.desserts{
+		animation:9s card-appear linear ;
+    	animation-fill-mode: forwards;
+	}
+
 }
+
 .menu-titles {
 	align-self: start;
 	border-bottom: 2px solid lightgreen;
 	width: 40px;
 }
 
-@media (min-width: 1024px) {
-	.restaurant-menu {
-		width: 80%;
-		width: 70%;
-	}
-	.menu-card {
-		.card {
-			width: 80%;
-		}
-	}
-	.restaurant-title-div{
-		width: 40%;
-	}
-}
