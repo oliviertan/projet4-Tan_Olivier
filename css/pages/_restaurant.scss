@@ -16,10 +16,10 @@
 		&:hover {
 			justify-content: space-evenly;
 			.checking {
-				width: calc(20%);
+				width: calc(22%);
 			}
 			.info{
-				width: 80%;
+				width: 70%;
 				
 			}
 		}
@@ -29,16 +29,13 @@
 		overflow: hidden;
 		.info {
 			margin-left: 10px;
-			margin-right: 20px;
 			margin-bottom: 10px;
 			width: 95%;
 			justify-content: space-between;
 			transition-duration: 1s;
 		}
 	}
-	.row {
-		align-items: flex-end;
-	}
+
 }
 
 .restaurant-menu {
@@ -63,8 +60,8 @@
 	align-self: center;
 	.card-txt {
 		width: 80%;
+		padding-top: 15px;
 		padding-left: 8px;
-		margin-right: 10px;
 		height: 55px;
 		overflow: hidden;
 		white-space: nowrap;
@@ -79,7 +76,7 @@
 		}
 	}
 	.prix {
-		align-items: flex-end;
+		padding-top: 15px;
 	}
 	.card-title {
 		margin: 0px;

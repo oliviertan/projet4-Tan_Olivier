@@ -16,6 +16,16 @@
     opacity: 0;
   }
 }
+@keyframes colorheart {
+  0% {
+    color: transparent;
+    font-weight: 400;
+  }
+  100% {
+    font-weight: 900;
+    color: var(--primary-color);
+  }
+}
 @keyframes lineGrow {
   to {
     width: 100%;
@@ -143,15 +153,12 @@ button:hover {
   display: none;
 }
 
-.likeheart {
-  transition-duration: 4s;
-}
 .likeheart input[type=checkbox] {
   font-weight: 400;
 }
 .likeheart input[type=checkbox]:checked ~ .fa-heart {
-  font-weight: 900;
-  color: var(--primary-color);
+  animation: 2s colorheart linear;
+  animation-fill-mode: forwards;
 }
 .likeheart .fa-heart {
   font-weight: 400;
@@ -412,21 +419,17 @@ header img {
   justify-content: space-evenly;
 }
 .menu-card .card:hover .checking {
-  width: 20%;
+  width: 22%;
 }
 .menu-card .card:hover .info {
-  width: 80%;
+  width: 70%;
 }
 .menu-card .card .info {
   margin-left: 10px;
-  margin-right: 20px;
   margin-bottom: 10px;
   width: 95%;
   justify-content: space-between;
   transition-duration: 1s;
-}
-.menu-card .row {
-  align-items: flex-end;
 }
 
 .restaurant-menu {
@@ -454,8 +457,8 @@ header img {
 }
 .menu-div .card-txt {
   width: 80%;
+  padding-top: 15px;
   padding-left: 8px;
-  margin-right: 10px;
   height: 55px;
   overflow: hidden;
   white-space: nowrap;
@@ -470,7 +473,7 @@ header img {
   white-space: nowrap;
 }
 .menu-div .prix {
-  align-items: flex-end;
+  padding-top: 15px;
 }
 .menu-div .card-title {
   margin: 0px;
@@ -495,6 +498,11 @@ header img {
   width: 40px;
 }
 
+@media (min-width: 390px) {
+  .info {
+    margin-right: 20px;
+  }
+}
 @media (min-width: 767.98px) {
   .restaurant-card {
     flex-direction: row;
@@ -545,6 +553,9 @@ header img {
   }
   .menu-card .card {
     width: 95%;
+  }
+  .menu-card .card .info {
+    margin-right: 50px;
   }
   .restaurant-title-div {
     width: 40%;

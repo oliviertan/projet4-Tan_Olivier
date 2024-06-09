@@ -1,3 +1,8 @@
+@media(min-width:390px){
+		.info{
+			margin-right: 20px;
+		}
+}
 
 @media (min-width:767.98px) {
 	.restaurant-card {
@@ -58,6 +63,9 @@
 	.menu-card {
 		.card {
 			width: 95%;
+			.info{
+				margin-right: 50px;
+			}
 		}
 	}
 	.restaurant-title-div{
