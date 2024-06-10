@@ -170,7 +170,7 @@ button:hover {
   justify-content: center;
   width: 0.001em;
   height: 100%;
-  background-color: rgb(174, 235, 174);
+  background-color: rgb(158, 208, 147);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   transition-duration: 1s;
@@ -370,6 +370,15 @@ header img {
   justify-content: center;
   width: 95%;
 }
+.restaurant-card .new {
+  position: relative;
+  margin-left: 60%;
+  padding: 8px;
+  margin-bottom: -50px;
+  z-index: 2;
+  width: fit-content;
+  background-color: rgb(158, 208, 147);
+}
 .restaurant-card .card {
   align-self: center;
   width: 90%;
@@ -502,6 +511,9 @@ header img {
   .info {
     margin-right: 20px;
   }
+  .restaurant-card .new {
+    margin-left: 75%;
+  }
 }
 @media (min-width: 767.98px) {
   .restaurant-card {
@@ -515,6 +527,9 @@ header img {
   }
   .restaurant h2 {
     margin-left: 10px;
+  }
+  .restaurant-card .new {
+    margin-left: 60%;
   }
 }
 @media (min-width: 1024px) {
@@ -545,6 +560,9 @@ header img {
   }
   .restaurant h2 {
     padding-left: 8%;
+  }
+  .restaurant-card .new {
+    margin-left: 80%;
   }
   /** pages restaurant**/
   .restaurant-menu {

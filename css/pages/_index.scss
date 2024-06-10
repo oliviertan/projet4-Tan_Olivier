@@ -71,6 +71,15 @@
 	flex-direction: column;
 	justify-content: center;
 	width: 95%;
+	.new{
+		position: relative;
+		margin-left: 60%;
+		padding: 8px;
+		margin-bottom: -50px;
+		z-index: 2;
+		width: fit-content;
+		background-color: $background-color_1;
+	}
 	.card {
 		align-self: center;
 		width: 90%;
