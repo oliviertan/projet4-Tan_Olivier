@@ -5,6 +5,9 @@
 		.restaurant-card .new{
 			margin-left: 75%;
 		}
+		.menu-div{
+			width: calc(80%);
+		}
 }
 
 @media (min-width:767.98px) {
@@ -23,7 +26,10 @@
 		}
 	}
 	.restaurant-card .new{
-		margin-left: 60%;
+		margin-left: 70%;
+	}
+	.info {
+		margin-right: 50px;
 	}
 }
 
