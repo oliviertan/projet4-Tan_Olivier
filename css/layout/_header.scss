@@ -2,8 +2,9 @@ header {
 	display: flex;
 	img {
 		align-self: center;
-		width: 50%;
+		width: 300px;
 		height: auto;
+		padding: 10px;
 	}
 }
 .header-accueil {
@@ -25,8 +26,7 @@ header {
 	}
 }
 .location {
-	border-bottom: 2px solid rgb(95, 91, 91);
-	border-top: 2px solid rgb(95, 91, 91);
+	box-shadow: inset 0px -3px rgb(165, 164, 164), 0px -3px rgb(199, 197, 197);
 	background-color: $background-color_2;
 	height: 30px;
 	padding-top: 9px;

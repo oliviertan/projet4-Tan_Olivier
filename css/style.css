@@ -249,11 +249,12 @@ footer .fa-solid {
   margin-right: 5px;
 }
 footer h3 {
-  margin-left: 10px;
+  padding-left: 20px;
   font-family: "shrikhand";
 }
 
 .footer-div {
+  padding-left: 15px;
   margin-left: 10px;
 }
 .footer-div div {
@@ -267,8 +268,9 @@ header {
 }
 header img {
   align-self: center;
-  width: 50%;
+  width: 300px;
   height: auto;
+  padding: 10px;
 }
 
 .header-accueil {
@@ -292,8 +294,7 @@ header img {
 }
 
 .location {
-  border-bottom: 2px solid rgb(95, 91, 91);
-  border-top: 2px solid rgb(95, 91, 91);
+  box-shadow: inset 0px -3px rgb(165, 164, 164), 0px -3px rgb(199, 197, 197);
   background-color: rgba(196, 195, 195, 0.5215686275);
   height: 30px;
   padding-top: 9px;
@@ -356,12 +357,18 @@ header img {
   max-width: 240px;
   height: 50px;
 }
+.intro p {
+  padding: 10px;
+}
 
 .restaurant {
   background-color: var(--main-bg-color);
   padding-top: 20px;
   padding-bottom: 25px;
   margin-top: 30px;
+}
+.restaurant h2 {
+  padding-left: 15px;
 }
 
 .restaurant-card {
@@ -439,7 +446,7 @@ header img {
   width: 95%;
   justify-content: space-between;
   transition-duration: 1s;
-} 
+}
 
 .restaurant-menu {
   display: flex;
@@ -540,11 +547,8 @@ header img {
 }
 @media (min-width: 1024px) {
   /** header **/
-  header img {
-    width: 25%;
-  }
   .location {
-    border: none;
+    box-shadow: none;
   }
   /** index **/
   .Fonctionnement {
@@ -586,7 +590,8 @@ header img {
   }
   /** footer **/
   footer h3 {
-    margin-right: 10px;
+    padding-left: 0;
+    padding-right: 30px;
     margin-bottom: 0px;
   }
   footer .column {

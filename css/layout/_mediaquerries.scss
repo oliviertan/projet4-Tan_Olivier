@@ -35,13 +35,8 @@
 
 @media (min-width: 1024px) {
 	/** header **/
-	header {
-		img {
-			width: 25%;
-		}
-	}
 	.location {
-		border: none;
+		box-shadow: none;
 	}
 	/** index **/
 	.Fonctionnement {
@@ -89,7 +84,8 @@
 	/** footer **/
 	footer {
 		h3 {
-			margin-right: 10px;
+			padding-left: 0;
+			padding-right: 30px;
 			margin-bottom: 0px;
 		}
 		.column {
